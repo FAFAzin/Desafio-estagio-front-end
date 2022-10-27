@@ -1,4 +1,4 @@
-import React from 'react'
+import styles from './SearchContryCity.module.css';
 //Library
 import Select from 'react-select';
 //hooks
@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { fCities, fCountries } from '../Data/dados'
 
 
-const Teste = () => {
+const SearchContryCity = () => {
 
     const [states, setStates] = useState([]);
     const [cities, setCities] = useState([]);
@@ -48,13 +48,15 @@ const Teste = () => {
     return (
         <>
             {/*Country */}
-            <Select isMulti options={country}/>
+            <Select isMulti options={country}
+            className={styles.Select}/>
 
             {/*Cities */}
-            <Select is isMulti options={city}/>
+            <Select is isMulti options={city}
+            className={styles.Select}/>
         </>
 
     )
 }
 
-export default Teste
+export default SearchContryCity

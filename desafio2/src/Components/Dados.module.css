@@ -1,0 +1,75 @@
+.Container{
+    width: 23rem;
+    height: 30rem;
+    
+    position: relative;
+    margin: auto;
+    padding: auto;
+
+    margin-top: 13rem;
+    border-radius: 10px;
+
+    background-color:#77DD78
+}
+.Container h2 {
+
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+
+    letter-spacing: 8px;
+
+    padding-top: 40px;
+    margin: 0px 50px 20px 60px;
+
+    max-width: 20rem;
+
+    color: #FEFFF3
+}
+
+.Container label {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+
+    text-align: left;
+    margin-left: -50px;
+
+    color: #FEFFF3;
+}
+
+.Container label input {
+    width: 20rem;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+
+    margin: 15px 23px;
+    padding: 15px;
+
+    border: none;
+    border-radius: 5px;
+
+}
+
+button {
+        background-color: #FEFFF3;
+        border: none;
+        color: #77DD78;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        font-size: 15px;
+        margin-top: 30px;
+
+        border-radius: 5px;
+
+        width:50%;
+        margin-left:25%;
+        margin-right:25%;
+   
+}
+

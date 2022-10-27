@@ -1,85 +1,58 @@
-import { useState } from 'react';
 import styles from './Dados.module.css';
+import { Link } from 'react-router-dom'
 
 const Dados = () => {
 
-    const [displayName, setDisplayName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [cpf, setCpf] = useState('');
-    const [error, setError] = useState('');
 
     const handleSubmit = (e) => {
 
         e.preventDefault();
 
-        setError('')
-
-        const user = {
-            displayName,
-            email,
-            phone,
-            cpf
-        }
-
-        setDisplayName('')
-        setEmail('')
-        setPhone('')
-        setCpf('')
-
-        console.log(user)
     }
 
-  return (
-    <div>
-        <h1>Insira seus dados</h1>
-        {/*Formulário para coletar informações pessoais*/}
-        <form onSubmit={handleSubmit}>
-            
-            <label>
-                <span>Nome:</span>
-                <input type='text' 
-                name='displayname'
-                required
-                placeholder='insira seu nome'
-                onChange={(e) => setDisplayName(e.target.value)}/>
-            </label>
-            
-            <label>
-                <span>Email:</span>
-                <input type='email' 
-                name='email'
-                required
-                placeholder='insira seu email'
-                onChange={(e) => setEmail(e.target.value)}/>
-            </label>
+    return (
+        <div className={styles.Container}>
+            {/*Formulário para coletar informações pessoais*/}
 
-            <label>
-                <span>Telefone:</span>
-                <input type='text' 
-                name='phone'
-                required
-                placeholder='insira seu número'
-                onChange={(e) => setPhone(e.target.value)}/>
-        
-            </label>
+            <h2>Welcome</h2>
+            <form className={styles.formulario} onSubmit={handleSubmit}>
 
-            <label>
-                <span>CPF:</span>
-                <input type='text' 
-                name='cpf'
-                required
-                placeholder='insira seu cpf'
-                onChange={(e) => setCpf(e.target.value)}/>
-            
-            </label>
 
-            <button className='btn'>Prosseguir</button>
+                <label>
 
-            
-        </form>
-    </div>
-  )
-}
+                    <input type='text'
+                        name='displayname'
+                        required
+                        placeholder='insira seu nome'
+                    />
 
+
+                    <input type='email'
+                        name='email'
+                        required
+                        placeholder='insira seu melhor email'
+                    />
+
+
+                    <input type='tel'
+                        name='phone'
+                        required
+                        placeholder='+55 (00) 00000-0000'
+                    />
+
+
+                    <input type='number'
+                        name='cpf'
+                        required
+                        placeholder='000.000.000-00'
+                    />
+
+                    <Link to='/places'><button>Proseguir</button></Link>
+                </label>
+
+
+            </form>
+        </div>
+    )
+    }
 export default Dados

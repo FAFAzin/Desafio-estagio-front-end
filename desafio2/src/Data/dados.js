@@ -2,14 +2,16 @@
 
 const BASE_URL = 'https://amazon-api.sellead.com';
 
-export const fCountries = () => {
+export const fCountries = async () => {
     const url = `${BASE_URL}/country`;
 
-    return fetch(url).then(response => response.json());
+    const response = await fetch(url);
+    return await response.json();
 }
 
-export const fCities = () => {
+export const fCities = async () => {
     const url = `${BASE_URL}/city`;
 
-    return fetch(url).then(response => response.json());
+    const response = await fetch(url);
+    return await response.json();
 }

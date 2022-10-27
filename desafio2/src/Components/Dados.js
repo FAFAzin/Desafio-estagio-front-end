@@ -22,6 +22,11 @@ const Dados = () => {
             cpf
         }
 
+        setDisplayName('')
+        setEmail('')
+        setPhone('')
+        setCpf('')
+
         console.log(user)
     }
 

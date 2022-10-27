@@ -2,8 +2,8 @@ import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
 import './App.css';
 
 //pages 
-import Dados from './pages/Dados';
-import Localizacao from './pages/Localizacao';
+import Dados from './Components/Dados';
+import Country from './Components/Places/Country';
 
 
 
@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Dados />} />
-        <Route path='/localizacao' element={<Localizacao />} />
+        <Route path='/places' element={<Country />} />
       </Routes>
     </BrowserRouter>
     </div>

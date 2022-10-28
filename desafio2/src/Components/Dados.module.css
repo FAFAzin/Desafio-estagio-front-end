@@ -6,7 +6,7 @@
     margin: auto;
     padding: auto;
 
-    margin-top: 13rem;
+    margin-top: 11.5rem;
     border-radius: 10px;
 
     background-color:#77DD78
@@ -18,7 +18,7 @@
     font-size: 40px;
     font-family: 'Roboto', sans-serif;
 
-    letter-spacing: 8px;
+    letter-spacing: 5px;
 
     padding-top: 40px;
     margin: 0px 50px 20px 60px;
@@ -63,7 +63,6 @@ button {
         font-weight: 700;
         display: inline-block;
         font-size: 15px;
-        margin-top: 30px;
 
         border-radius: 5px;
 

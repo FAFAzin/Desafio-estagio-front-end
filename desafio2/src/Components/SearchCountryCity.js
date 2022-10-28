@@ -1,4 +1,4 @@
-import styles from './SearchContryCity.module.css';
+import styles from './Search.module.css';
 //Library
 import Select from 'react-select';
 //hooks
@@ -46,15 +46,24 @@ const SearchContryCity = () => {
 
 
     return (
-        <>
+        <div className={styles.selecters}>
+
+            <h2>Quase lá...</h2>
+
             {/*Country */}
             <Select isMulti options={country}
-            className={styles.Select}/>
+            className={styles.select}
+            placeholder='Países'
+            isSearchable={true}/>
 
             {/*Cities */}
             <Select is isMulti options={city}
-            className={styles.Select}/>
-        </>
+            className={styles.select}
+            placeholder='Cidades'
+            isSearchable={true}/>
+
+            <button>Finalizar</button>
+        </div>
 
     )
 }

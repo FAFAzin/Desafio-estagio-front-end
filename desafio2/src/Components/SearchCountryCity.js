@@ -27,7 +27,7 @@ const SearchContryCity = () => {
     }, []);
 
 
-   //destruct countries 
+    //destruct countries 
     const country = states.map(item => {
         return {
             label: item.name,
@@ -52,15 +52,15 @@ const SearchContryCity = () => {
 
             {/*Country */}
             <Select isMulti options={country}
-            className={styles.select}
-            placeholder='Países'
-            isSearchable={true}/>
+                className={styles.select}
+                placeholder='Países'
+                isSearchable={true} />
 
             {/*Cities */}
             <Select is isMulti options={city}
-            className={styles.select}
-            placeholder='Cidades'
-            isSearchable={true}/>
+                className={styles.select}
+                placeholder='Cidades'
+                isSearchable={true} />
 
             <button>Finalizar</button>
         </div>

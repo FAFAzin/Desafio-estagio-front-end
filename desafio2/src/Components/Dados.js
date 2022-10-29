@@ -1,17 +1,16 @@
 import styles from './Dados.module.css';
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
+import { SearchCountryCity } from './SearchCountryCity'
 
 const Dados = () => {
 
-    const [email, setEmail] = useState('');
+
+    //const handleSubmit = (e) => {
+
+    //   e.preventDefault();
 
 
-    const handleSubmit = (e) => {
-
-        e.preventDefault();
-
-    }
 
     //Mascara CPF
     const mascaraCpf = () => {
@@ -28,42 +27,20 @@ const Dados = () => {
             {/*Formulário para coletar informações pessoais*/}
 
             <h2>Bem Vindo </h2>
-            <form className={styles.formulario} onSubmit={handleSubmit}>
-
-
+            <form className={styles.formulario}>
                 <label>
-                    {/*teste */}
-                    <label>
-                        <span>E-mail:</span>
-                        <input type="email"
-                            name='email'
-                            required
-                            placeholder='insira seu email'
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)} />
-                    </label>
-
                     <input type='text'
                         name='displayname'
                         required
-                        placeholder='insira seu nome'
-                    />
-
-
+                        placeholder='insira seu nome'/>
                     <input type='email'
                         name='email'
                         required
-                        placeholder='insira seu melhor email'
-                    />
-
-
+                        placeholder='insira seu melhor email'/>
                     <input type='tel'
                         name='phone'
                         required
-                        placeholder='+55 (00) 00000-0000'
-                    />
-
-
+                        placeholder='+55 (00) 00000-0000'/>
                     <input type='text'
                         id='cpf'
                         autoComplete='off'
@@ -71,14 +48,14 @@ const Dados = () => {
                         name='cpf'
                         required
                         placeholder='000.000.000-00'
-                        onKeyUp={mascaraCpf}
-                    />
+                        onKeyUp={mascaraCpf}/>
 
-                    <Link to='/places'><button>Proseguir</button></Link>
+                    <button>ok</button>
+
+                    {/*<Link to='/places'><button>Proseguir</button></Link>*/}
                 </label>
-
-
             </form>
+
         </div>
     )
 }

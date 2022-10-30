@@ -11,6 +11,6 @@ Com seu Visual Estudio Code aberto, no terminal, entre na pasta raiz do projeto 
 #### npm start 
 No terminal do Visual Estudio Code digite esse comando, o programa irá iniciar e será renderizado no navegador.
 
-##Observação
+## Observação
 É necessário que o node esteja instalado na máquina 
 
